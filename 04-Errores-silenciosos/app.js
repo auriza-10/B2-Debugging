@@ -36,16 +36,17 @@ function updateBall() {
     speed.y += gravity;
 
     // Rebote en el piso
-    if (ball.y + ball.radius > canvas.height || ball.y <= 0) {
-        ball.y = canvas.height - ball.radius;
+    if (ball.y > canvas.height - ball.radius || ball.y < 0) {
+        //ball.y = canvas.height - ball.radius;
         speed.y *= -bounceFactor;
     }
 
     // Rebote en los lados
-    if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
-        speed.x *= -1.5;
+    if (ball.x  > canvas.width - ball.radius || ball.x - ball.radius < 0) {
+        speed.x *= -1;
     }
 }
+
 
 function animate() {
     ctx.fillStyle = 'rgba(255,255,255,0.5)';

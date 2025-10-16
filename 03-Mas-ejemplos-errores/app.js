@@ -21,6 +21,7 @@ function createBall() {
         radius: 20,
         color: 'tomato',
     };
+    return b;
 }
 
 function drawBall() {
@@ -56,3 +57,8 @@ function animate() {
 }
 
 animate();
+
+// Primero intenté cambiar en la función updateBall el ball por solo b.
+// Luego intenté cambiar ball.y por ballY.
+// Después quité el límite establecido en el rebote del piso (if ball.y + ball.radius > canvas.height).
+// Por último, regresé el código original y solo añadí return b; en la función createBall para que se creara la pelota correctamente.
