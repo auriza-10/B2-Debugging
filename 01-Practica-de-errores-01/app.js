@@ -1,5 +1,5 @@
 /* Práctica 01. */
-console.log('01. Práctica de errores 01.');
+console.log('01. Práctica de errores A.');
 
 console.log("Inicio del programa";
  
